@@ -1,0 +1,6 @@
+task_id,name,start_date,finish_date,duration_days,resource,discipline,location,predecessors
+A100,Procure structural steel,2026-03-01,2026-03-05,5,Procurement,Structural,Zone A,
+A110,Erect steel framing,2026-03-08,2026-03-10,2,Steel Crew,Structural,Zone A,A100
+B200,Main slab concrete pour,2026-04-12,2026-04-12,1,Concrete Crew,Civil,Zone B,
+B210,Podium concrete pour,2026-04-12,2026-04-12,1,Concrete Crew,Civil,Zone B,
+C300,Switchgear installation,2026-05-10,2026-05-11,2,Electrical,MEP,Plantroom,A110
