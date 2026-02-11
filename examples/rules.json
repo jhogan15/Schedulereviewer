@@ -1,0 +1,12 @@
+{
+  "concrete_keywords": ["concrete", "pour"],
+  "max_major_pours_per_day": 1,
+  "min_duration_by_keyword": {
+    "erect": 3,
+    "installation": 4
+  },
+  "min_lead_time_days": {
+    "steel": 14,
+    "switchgear": 45
+  }
+}

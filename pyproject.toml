@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "schedulereviewer"
+version = "0.1.0"
+description = "Schedule risk and logic checker for construction plans"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Schedulereviewer Team"}]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+schedulereviewer = "schedulereviewer.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
