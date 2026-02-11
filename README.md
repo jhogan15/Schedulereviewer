@@ -42,6 +42,21 @@ Example output:
 [MEDIUM] DURATION_UNREALISTIC tasks=C300 :: Task 'Switchgear installation' has duration 2.0 days, below configured minimum of 4.0 for keyword 'installation'.
 ```
 
+## Run in the browser
+
+If you want a no-install UI, use the built-in browser app:
+
+```bash
+python -m http.server 8000
+```
+
+Then open `http://localhost:8000/web/` and either:
+
+- upload your normalized CSV export, or
+- paste CSV directly and click **Analyze Schedule**.
+
+The browser UI uses the same core rule logic categories (concrete overlap, duration realism, lead-time checks) and supports custom JSON config overrides.
+
 ## Product roadmap (recommended)
 
 1. **Import adapters**

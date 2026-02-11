@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule Reviewer (Browser MVP)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Schedule Reviewer</h1>
+      <p class="subtitle">Run schedule logic checks directly in your browser.</p>
+
+      <section class="card">
+        <h2>1) Paste or upload normalized schedule CSV</h2>
+        <input id="csvFile" type="file" accept=".csv,text/csv" />
+        <textarea id="csvInput" rows="12" placeholder="Paste CSV with headers: task_id,name,start_date,finish_date,duration_days,resource,discipline,location,predecessors"></textarea>
+      </section>
+
+      <section class="card">
+        <h2>2) Optional rule config JSON</h2>
+        <textarea id="configInput" rows="10"></textarea>
+      </section>
+
+      <section class="actions">
+        <button id="analyzeBtn">Analyze Schedule</button>
+        <button id="loadSampleBtn" class="secondary">Load Example Data</button>
+      </section>
+
+      <section class="card">
+        <h2>Findings</h2>
+        <div id="summary"></div>
+        <table id="findingsTable" hidden>
+          <thead>
+            <tr>
+              <th>Severity</th>
+              <th>Code</th>
+              <th>Task IDs</th>
+              <th>Message</th>
+            </tr>
+          </thead>
+          <tbody id="findingsBody"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
